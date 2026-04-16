@@ -40,12 +40,20 @@
             transform: skewX(-25deg); animation: shine 3s infinite;
         }
 
-        .soft-shadow { box-shadow: 0 0 0 1px #FFE4E1, 0 30px 60px rgba(255, 182, 193, 0.3); }
+        .soft-shadow { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0,0,0,0.02); }
         ::-webkit-scrollbar { display: none; }
         
-        /* 썸네일 속 체크박스 디자인 */
-        input[type="checkbox"] { -webkit-appearance: none !important; appearance: none !important; width: 22px; height: 22px; min-width: 22px; border: 2px solid #E5E7EB; background-color: #F3F4F6; border-radius: 8px; position: relative; flex-shrink: 0; }
-        input[type="checkbox"]:checked { opacity: 1; background-color: var(--color-main, #FFB6C1); border-color: var(--color-main, #FFB6C1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-size: 14px; background-position: center; background-repeat: no-repeat; transform: scale(1.1) rotate(-5deg); }
+        input[type="checkbox"] { 
+            -webkit-appearance: none !important; appearance: none !important; 
+            width: 14px; height: 14px; min-width: 14px; 
+            border: 1.5px solid #E5E7EB; background-color: #F3F4F6; border-radius: 4px; 
+            position: relative; flex-shrink: 0; margin-top: 1px;
+        }
+        input[type="checkbox"]:checked { 
+            opacity: 1; background-color: var(--color-main, #FFB6C1); border-color: var(--color-main, #FFB6C1); 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E"); 
+            background-size: 9px; background-position: center; background-repeat: no-repeat; transform: scale(1.1) rotate(-5deg); 
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-[#FFF0F5] via-white to-[#FFE4E1] min-h-screen selection:bg-diary-main selection:text-white">
@@ -73,22 +81,19 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href="https://github.com/DearMySn1p3r/DearMySn1p3r_13/releases/download/V.1.0/MomoDiary_Final.exe" class="btn-shine relative overflow-hidden bg-diary-main text-white px-10 py-5 rounded-[24px] font-bold text-lg shadow-lg shadow-diary-main/40 hover:bg-diary-deep hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
+                <a href="https://github.com/DearMySn1p3r/DearMySn1p3r_13/releases/download/V.1.0/MomoDiary.exe" class="btn-shine relative overflow-hidden bg-diary-main text-white px-10 py-5 rounded-[24px] font-bold text-lg shadow-lg shadow-diary-main/40 hover:bg-diary-deep hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     Windows 앱 다운로드 (.exe)
                 </a>
             </div>
             
             <p class="text-[13px] text-gray-400 mt-8 font-medium leading-relaxed">
-                다운로드 후 <span class="font-bold text-diary-main">MomoDiary_Final.exe</span>를 바로 실행해주세요! 🚀<br>
+                다운로드 후 <span class="font-bold text-diary-main">MomoDiary.exe</span>를 바로 실행해주세요! 🚀<br>
                 설치 창이 뜨면 ‘추가 정보’ ➡️ ‘실행’을 눌러주시면 됩니다.
             </p>
         </div>
 
         <div class="flex-1 flex justify-center w-full max-w-[500px] lg:max-w-none relative animate-float pointer-events-none select-none">
-            <div class="absolute top-10 left-10 w-64 h-64 bg-gradient-to-tr from-[#FFB6C1]/40 to-[#9ECBE3]/40 rounded-full blur-3xl -z-10"></div>
-            <div class="absolute bottom-10 right-10 w-72 h-72 bg-gradient-to-tr from-[#FFE4E1]/50 to-[#CBAACB]/40 rounded-full blur-3xl -z-10"></div>
-
             <div class="w-[440px] h-[820px] bg-gradient-to-b from-white via-white to-diary-bg rounded-[50px] soft-shadow flex flex-col overflow-hidden border-[8px] border-white ring-1 ring-gray-100 relative rotate-2 transform scale-[0.6] sm:scale-[0.7] lg:scale-[0.8] origin-center mx-auto">
                 
                 <div class="w-full h-[85px] absolute top-0 left-0 z-20">
@@ -133,27 +138,27 @@
 
                 <div class="flex-1 px-12 pb-14 flex flex-col gap-[15px]">
                     <div class="flex mb-[25px] mt-2">
-                        <div class="flex-1 bg-white/70 border-2 border-diary-light/40 rounded-[16px] px-5 py-3.5 text-[11px] text-gray-400 font-bold mr-[20px]">오늘 할 일...</div>
-                        <div class="bg-diary-main text-white w-12 h-12 rounded-[16px] font-black text-xl shadow-md flex items-center justify-center shrink-0">+</div>
+                        <div class="flex-1 bg-white/70 border-2 border-diary-light/40 rounded-[14px] px-4 py-3 text-[11px] text-gray-400 font-bold mr-[15px]">오늘 할 일...</div>
+                        <div class="bg-diary-main text-white w-11 h-11 rounded-[14px] font-black text-xl shadow-md flex items-center justify-center shrink-0">+</div>
                     </div>
                     
-                    <div class="flex items-center bg-white/60 p-5 rounded-[24px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
-                        <input type="checkbox" checked class="mr-[20px]">
+                    <div class="flex items-center bg-white/60 px-4 py-3 rounded-[16px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
+                        <input type="checkbox" checked class="mr-[15px]">
                         <span class="flex-1 text-[12px] font-bold line-through text-gray-400">다이어리 폰트 Quicksand로 변경하기 ✨</span>
                     </div>
                     
-                    <div class="flex items-center bg-white/60 p-5 rounded-[24px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
-                        <input type="checkbox" checked class="mr-[20px]">
+                    <div class="flex items-center bg-white/60 px-4 py-3 rounded-[16px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
+                        <input type="checkbox" checked class="mr-[15px]">
                         <span class="flex-1 text-[12px] font-bold line-through text-gray-400">12색 마카롱 커스텀 팔레트 탑재 🎨</span>
                     </div>
 
-                    <div class="flex items-center bg-white/60 p-5 rounded-[24px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
-                        <input type="checkbox" checked class="mr-[20px]">
+                    <div class="flex items-center bg-white/60 px-4 py-3 rounded-[16px] border-[3px] border-diary-light/30 shadow-sm backdrop-blur-sm">
+                        <input type="checkbox" checked class="mr-[15px]">
                         <span class="flex-1 text-[12px] font-bold line-through text-gray-400">돋보기 기능 & 글씨 크기 24px 적용 🔠</span>
                     </div>
                     
-                    <div class="flex items-center bg-white/60 p-5 rounded-[24px] border-[3px] border-diary-main/40 shadow-md backdrop-blur-sm transform scale-[1.02]">
-                        <input type="checkbox" class="mr-[20px]">
+                    <div class="flex items-center bg-white/60 px-4 py-3 rounded-[16px] border-[3px] border-diary-main/40 shadow-md backdrop-blur-sm transform scale-[1.02]">
+                        <input type="checkbox" class="mr-[15px]">
                         <span class="flex-1 text-[12px] font-bold text-gray-600">깃허브 배포 사이트 썸네일 업데이트 🚀</span>
                     </div>
                 </div>
