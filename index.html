@@ -6,13 +6,13 @@
     <title>Momo Diary - 나만의 핑크빛 비밀 일기장</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Pretendard', 'sans-serif'], nunito: ['"Nunito"', 'sans-serif'] },
+                    fontFamily: { sans: ['Pretendard', 'sans-serif'], quicksand: ['"Quicksand"', 'sans-serif'] },
                     colors: { 
                         diary: { main: '#FFB6C1', deep: '#FF8DA1', light: '#FFE4E1', text: '#6B7280', bg: '#FFF0F5' }
                     }
@@ -47,7 +47,7 @@
 <body class="bg-gradient-to-br from-[#FFF0F5] via-white to-[#FFE4E1] min-h-screen selection:bg-diary-main selection:text-white">
 
     <nav class="w-full px-8 py-8 flex justify-center items-center max-w-6xl mx-auto">
-        <div class="font-nunito font-black text-diary-main text-3xl tracking-tighter drop-shadow-sm">Momo Diary.</div>
+        <div class="font-quicksand font-bold text-diary-main text-3xl tracking-tighter drop-shadow-sm">Momo Diary.</div>
     </nav>
 
     <main class="max-w-6xl mx-auto px-8 pt-8 pb-24 flex flex-col lg:flex-row items-center justify-between gap-16 min-h-[calc(100vh-100px)]">
@@ -59,7 +59,7 @@
             
             <h1 class="text-5xl lg:text-6xl font-black text-gray-800 leading-tight mb-6 break-keep">
                 나만의 작고 소중한 <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-diary-main to-diary-deep font-nunito tracking-tighter">Momo Diary.</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-diary-main to-diary-deep font-quicksand tracking-tighter">Momo Diary.</span>
             </h1>
             
             <p class="text-lg text-gray-500 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0 break-keep">
@@ -76,7 +76,7 @@
             </div>
             
             <p class="text-[13px] text-gray-400 mt-8 font-medium leading-relaxed">
-                다운로드 후 <span class="font-bold text-diary-main">MomoDiary.exe</span>를 바로 실행해주세요! 🚀<br>
+                다운로드 후 <span class="font-bold text-diary-main">MomoDiary_Premium.exe</span>를 바로 실행해주세요! 🚀<br>
                 설치 창이 뜨면 ‘추가 정보’ ➡️ ‘실행’을 눌러주시면 됩니다.
             </p>
         </div>
@@ -103,15 +103,15 @@
                 </div>
 
                 <div class="px-10 pt-[105px] pb-6 shrink-0">
-                    <h2 class="font-nunito font-black text-diary-main text-[2.5rem] leading-tight tracking-tighter drop-shadow-sm mb-10">Momo<br>Diary.</h2>
+                    <h2 class="font-quicksand font-bold text-diary-main text-[2.5rem] leading-tight tracking-tighter drop-shadow-sm mb-10">Momo<br>Diary.</h2>
                     <div class="flex items-center w-full gap-[30px]">
                         <div class="relative w-[75px] h-[75px] shrink-0 shadow-sm rounded-[26px] border-[3px] border-diary-light/80 bg-white flex items-center justify-center">
                             <svg class="w-8 h-8 text-diary-main/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                         </div>
                         <div class="flex-1 min-w-0">
                             <div class="flex justify-between items-end mb-3">
-                                <span class="text-[11px] font-black text-diary-deep font-nunito uppercase tracking-widest opacity-80">My Goal</span>
-                                <span class="text-[12px] font-black text-diary-main font-nunito">65%</span>
+                                <span class="text-[11px] font-black text-diary-deep font-quicksand uppercase tracking-widest opacity-80">My Goal</span>
+                                <span class="text-[12px] font-black text-diary-main font-quicksand">65%</span>
                             </div>
                             <div class="h-2.5 bg-white/80 rounded-full overflow-hidden border border-white/50">
                                 <div class="h-full bg-diary-main w-2/3 rounded-full"></div>
@@ -158,7 +158,7 @@
 
     <footer class="text-center py-10 text-xs font-bold text-gray-400">
         <p>© 2026 Momo Diary. All rights reserved.</p>
-        <p class="mt-2 font-nunito">Made with 💕 by You</p>
+        <p class="mt-2 font-quicksand">Made with 💕 by You</p>
     </footer>
 
 </body>
