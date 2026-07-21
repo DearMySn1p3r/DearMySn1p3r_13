@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Momo Diary — 나만의 핑크빛 비밀 일기장</title>
-<meta name="description" content="PC · 안드로이드 · 아이폰에서 쓰는 핑크빛 다이어리. 일기, 캘린더, 메모, 페르소나까지 한 곳에.">
+<meta name="description" content="Windows · macOS · 안드로이드에서 쓰는 핑크빛 다이어리. 일기, 캘린더, 메모, 페르소나까지 한 곳에.">
 <link rel="icon" type="image/png" href="MOMO.png">
 <link rel="apple-touch-icon" href="MOMO.png">
 
@@ -55,16 +55,11 @@
   :focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px;}
 
   /* ── 머리말 ── */
-  .top{display:flex;align-items:center;justify-content:space-between;padding:30px 0 10px;}
+  .top{display:flex;align-items:center;padding:30px 0 10px;}
   .mark{
     font-family:'Nunito',sans-serif;font-weight:900;font-size:26px;
     letter-spacing:-1.2px;color:var(--pink);
     text-shadow:0 2px 0 rgba(255,255,255,.95);
-  }
-  .chip{
-    font-size:11px;font-weight:800;letter-spacing:.3px;color:var(--pink-deep);
-    background:rgba(255,255,255,.7);border:1.5px solid var(--ring);
-    padding:7px 14px;border-radius:999px;
   }
 
   /* ── 히어로 ── */
@@ -119,30 +114,24 @@
   .grab .ico svg{width:21px;height:21px;}
   .grab .txt{flex:1;min-width:0;}
   .grab .name{
-    font-family:'Nunito',sans-serif;font-weight:900;font-size:15px;
+    display:block;font-family:'Nunito',sans-serif;font-weight:900;font-size:15px;
     letter-spacing:.2px;color:var(--ink);margin-bottom:2px;
   }
-  .grab .note{font-size:11.5px;font-weight:600;color:var(--ink-soft);line-height:1.5;}
+  .grab .note{display:block;font-size:11.5px;font-weight:600;color:var(--ink-soft);line-height:1.5;}
   .grab .arw{color:var(--tint-50);flex:none;transition:transform .18s ease,color .18s ease;}
   .grab:hover .arw{transform:translateX(4px);color:var(--pink);}
 
-  /* 첫 번째(PC)는 채워진 형태로 무게를 실어줍니다 */
+  /* 첫 번째(Windows)는 채워진 형태로 무게를 실어줍니다 */
   .grab.primary{
-    border-color:transparent;color:#fff;
+    border-color:transparent;
     background:linear-gradient(160deg,var(--tint-75) 0%,var(--pink) 100%);
     box-shadow:0 6px 20px var(--glow),inset 0 1px 0 rgba(255,255,255,.35);
   }
-  .grab.primary:hover{background:linear-gradient(160deg,var(--tint-75) 0%,var(--pink) 100%);box-shadow:0 12px 30px var(--glow);}
+  .grab.primary:hover{box-shadow:0 12px 30px var(--glow);}
   .grab.primary .ico{background:rgba(255,255,255,.26);color:#fff;}
   .grab.primary .name{color:#fff;}
-  .grab.primary .note{color:rgba(255,255,255,.86);}
+  .grab.primary .note{color:rgba(255,255,255,.88);}
   .grab.primary .arw{color:rgba(255,255,255,.75);}
-
-  .foot-note{
-    margin-top:26px;font-size:12px;line-height:1.85;color:var(--ink-soft);
-    font-weight:600;word-break:keep-all;
-  }
-  .foot-note b{color:var(--pink-deep);font-weight:800;}
 
   /* ── 폰 목업: 실제 앱 화면 그대로 ── */
   .stage{display:flex;justify-content:center;}
@@ -153,7 +142,6 @@
     box-shadow:0 30px 70px rgba(224,112,143,.26),0 0 0 1px rgba(255,255,255,.7);
     animation:float 7s ease-in-out infinite;
   }
-  @media(max-width:959px){.phone{transform:scale(.92);}}
   .phone::before{
     content:'';position:absolute;inset:0;pointer-events:none;
     background-image:
@@ -161,9 +149,6 @@
       repeating-linear-gradient(-45deg,var(--hatch) 0,var(--hatch) 1px,transparent 1px,transparent 16px);
   }
   @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
-  @media(max-width:959px){
-    @keyframes float{0%,100%{transform:translateY(0) scale(.92);}50%{transform:translateY(-12px) scale(.92);}}
-  }
 
   .win{position:absolute;top:14px;right:15px;display:flex;gap:6px;z-index:3;}
   .win i{width:15px;height:15px;border-radius:50%;display:block;}
@@ -255,6 +240,10 @@
   footer p{margin:0;font-size:12px;font-weight:700;color:var(--ink-soft);}
   footer .sig{margin-top:8px;font-family:'Nunito',sans-serif;font-weight:800;color:var(--tint-50);}
 
+  @media(max-width:959px){
+    .phone{transform:scale(.92);}
+    @keyframes float{0%,100%{transform:translateY(0) scale(.92);}50%{transform:translateY(-12px) scale(.92);}}
+  }
   @media(prefers-reduced-motion:reduce){
     *{animation:none !important;transition:none !important;}
   }
@@ -265,7 +254,6 @@
 <div class="wrap">
   <header class="top">
     <div class="mark">Momo Diary.</div>
-    <div class="chip">v3.4 · PC · Android · iPhone</div>
   </header>
 
   <main class="hero">
@@ -297,6 +285,19 @@
           </span>
         </a>
 
+        <a class="grab" href="https://github.com/DearMySn1p3r/DearMySn1p3r_13/releases/download/V.1.0/MomoDiary.dmg">
+          <span class="ico" aria-hidden="true">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16.36 12.72c-.02-2.31 1.88-3.42 1.97-3.47-1.07-1.57-2.74-1.78-3.34-1.81-1.42-.14-2.77.84-3.49.84-.72 0-1.83-.82-3.01-.8-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.02.72c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.25-2.54 1.27-2.6-.03-.01-2.44-.94-2.46-3.72zM14.1 5.9c.64-.78 1.07-1.85.95-2.93-.92.04-2.03.61-2.69 1.38-.59.69-1.11 1.79-.97 2.84 1.03.08 2.08-.52 2.71-1.29z"/></svg>
+          </span>
+          <span class="txt">
+            <span class="name">macOS</span>
+            <span class="note">열고 Momo Diary 를 응용 프로그램으로 옮기세요</span>
+          </span>
+          <span class="arw" aria-hidden="true">
+            <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
         <a class="grab" href="https://github.com/DearMySn1p3r/DearMySn1p3r_13/releases/download/V.1.0/MomoDiary.apk">
           <span class="ico" aria-hidden="true">
             <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.341L19.51 18.785a.75.75 0 11-1.3.75l-2.011-3.484A9.2 9.2 0 0112 17a9.2 9.2 0 01-4.035-.949L5.953 19.535a.75.75 0 01-1.3-.75l1.988-3.444C4.341 13.911 2.871 11.584 2.57 8.889h18.86c-.301 2.695-1.771 5.022-3.907 6.452zM7 11a1 1 0 100-2 1 1 0 000 2zm10 0a1 1 0 100-2 1 1 0 000 2z"/></svg>
@@ -310,26 +311,7 @@
           </span>
         </a>
 
-        <a class="grab" href="https://github.com/DearMySn1p3r/DearMySn1p3r_13/releases/download/V.1.0/MomoDiary-ios.zip">
-          <span class="ico" aria-hidden="true">
-            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16.36 12.72c-.02-2.31 1.88-3.42 1.97-3.47-1.07-1.57-2.74-1.78-3.34-1.81-1.42-.14-2.77.84-3.49.84-.72 0-1.83-.82-3.01-.8-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.02.72c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.25-2.54 1.27-2.6-.03-.01-2.44-.94-2.46-3.72zM14.1 5.9c.64-.78 1.07-1.85.95-2.93-.92.04-2.03.61-2.69 1.38-.59.69-1.11 1.79-.97 2.84 1.03.08 2.08-.52 2.71-1.29z"/></svg>
-          </span>
-          <span class="txt">
-            <span class="name">iPhone</span>
-            <span class="note">Xcode 프로젝트 · 맥에서 직접 설치합니다</span>
-          </span>
-          <span class="arw" aria-hidden="true">
-            <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="M9 5l7 7-7 7"/></svg>
-          </span>
-        </a>
       </div>
-
-      <p class="foot-note">
-        <b>아이폰은 한 걸음 더 필요합니다.</b> 애플이 링크로 앱을 설치하는 걸 막아 두어서,
-        맥에서 Xcode 로 열고 본인 애플 ID 로 폰에 올려야 합니다.
-        무료 애플 ID 로는 7일마다 다시 올려주면 되고, 앱을 지우지 않는 한 일기는 그대로 남습니다.
-        자세한 방법은 압축 파일 안 README 에 적어 두었습니다.
-      </p>
     </section>
 
     <section class="stage" aria-label="앱 화면 미리보기">
